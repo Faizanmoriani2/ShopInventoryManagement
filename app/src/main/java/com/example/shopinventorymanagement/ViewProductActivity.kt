@@ -22,8 +22,7 @@ class ViewProductActivity : AppCompatActivity() {
     private lateinit var edtTxtSearch: EditText
     private lateinit var recyclerView: RecyclerView
     private lateinit var productAdapter: ProductAdapter
-    private lateinit var btnEdit: ImageButton
-    private lateinit var btnDelete: ImageButton
+
     private val productList = mutableListOf<Product>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +31,6 @@ class ViewProductActivity : AppCompatActivity() {
 
         edtTxtSearch = findViewById(R.id.edtTxtSearch)
         imgSearch = findViewById(R.id.imgSearch)
-        btnEdit = findViewById(R.id.btnEdit)
-        btnDelete = findViewById(R.id.btnDelete)
 
         var searchText = edtTxtSearch.text.toString()
 
@@ -42,15 +39,6 @@ class ViewProductActivity : AppCompatActivity() {
 
         })
 
-        // Delete Button Functionality
-        btnDelete.setOnClickListener(View.OnClickListener {
-
-        })
-
-        // Edit Button Functionality
-        btnEdit.setOnClickListener(View.OnClickListener {
-
-        })
 
         // Set up toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbarViewProd)
