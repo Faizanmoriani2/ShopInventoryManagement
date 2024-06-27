@@ -1,7 +1,6 @@
 # Mobile Application Development - Project
 
 **Introduction**
-<hr >
 **Project:** Shopkeeper Inventory and POS App
 **Description:**
 The Shopkeeper Inventory and POS App is a mobile application 
