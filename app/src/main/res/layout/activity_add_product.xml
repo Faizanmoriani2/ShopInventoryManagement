@@ -19,7 +19,7 @@
 
 
     <EditText
-        android:id="@+id/edtTxtNameProd"
+        android:id="@+id/edtTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -32,43 +32,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/edtTextStock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Stock"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtPrice"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintStart_toStartOf="@+id/edtTxtPrice"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPrice" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/edtTxtPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Price"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtTxtIdProd"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtBarCode"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtIdProd"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtIdProd" />
+        app:layout_constraintStart_toStartOf="@+id/edtTxtBarCode"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtBarCode" />
 
     <EditText
-        android:id="@+id/edtTxtIdProd"
+        android:id="@+id/edtTxtBarCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Barcode/ID"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtTxtNameProd"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtNameProd"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtNameProd" />
+        app:layout_constraintStart_toStartOf="@+id/edtTxtName"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtName" />
 
     <Button
         android:id="@+id/btnScanBarcode"
@@ -76,10 +76,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Scan Barcode"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText4"
+        app:layout_constraintEnd_toEndOf="@+id/edtTextStock"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTextStock" />
 
     <Button
         android:id="@+id/btnDiscard"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:text="Discard"
         app:layout_constraintBottom_toBottomOf="@+id/btnSave"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText4"
+        app:layout_constraintEnd_toEndOf="@+id/edtTextStock"
         app:layout_constraintTop_toTopOf="@+id/btnSave"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -98,6 +98,6 @@
         android:layout_marginBottom="132dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4" />
+        app:layout_constraintStart_toStartOf="@+id/edtTextStock" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
