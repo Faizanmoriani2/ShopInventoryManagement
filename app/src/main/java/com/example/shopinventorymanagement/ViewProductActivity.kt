@@ -2,6 +2,7 @@ package com.example.shopinventorymanagement
 
 import ProductAdapter
 import android.annotation.SuppressLint
+import android.content.Context
 import android.media.Image
 import android.os.Bundle
 import android.view.View
@@ -13,8 +14,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.shopinventorymanagement.contract.Product
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shopinventorymanagement.utils.DataProvider
 
 class ViewProductActivity : AppCompatActivity() {
 
@@ -22,7 +25,8 @@ class ViewProductActivity : AppCompatActivity() {
     private lateinit var edtTxtSearch: EditText
     private lateinit var recyclerView: RecyclerView
     private lateinit var productAdapter: ProductAdapter
-
+    lateinit var dataSource: MutableList<Product>
+    private lateinit var context: Context
     private val productList = mutableListOf<Product>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +58,13 @@ class ViewProductActivity : AppCompatActivity() {
         // Load some dummy data
         loadDummyData()
 
+        context = this
+
         // Initialize adapter and set it to RecyclerView
-        productAdapter = ProductAdapter(productList)
+        dataSource = DataProvider.response.allProducts
+        productAdapter = ProductAdapter(this, dataSource)
         recyclerView.adapter = productAdapter
+
     }
 
     // Handle "up" button click event
